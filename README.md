@@ -142,6 +142,3 @@ resume-analyzer/
 | POST | `/api/ai/career` | Get career guidance |
 | GET | `/api/history/:resumeId` | Get analysis history |
 | GET | `/api/resumes` | Get all uploaded resumes |
-
-
-Built with ❤️ using MERN Stack + Google Gemini AI
