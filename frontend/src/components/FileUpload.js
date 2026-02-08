@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+const API_BASE_URL = process.env.REACT_APP_API_URL;
+
 const FileUpload = ({ onUploadSuccess, onUploadError }) => {
   const [isDragging, setIsDragging] = useState(false);
   const [isUploading, setIsUploading] = useState(false);
@@ -50,7 +52,7 @@ const FileUpload = ({ onUploadSuccess, onUploadError }) => {
       const formData = new FormData();
       formData.append('resume', file);
 
-      const response = await fetch('http://localhost:5000/api/resume/upload', {
+      const response = await fetch(`${API_BASE_URL}/api/resume/upload`, {
         method: 'POST',
         body: formData
       });
