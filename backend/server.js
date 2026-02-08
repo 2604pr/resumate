@@ -42,6 +42,13 @@ app.get('/', (req, res) => {
 
 app.use('/api', apiRoutes);
 
+app.use(
+  cors({
+    origin: "https://resumate-pied.vercel.app/",
+    methods: ["GET", "POST"],
+  })
+);
+
 // Error handling middleware
 app.use(errorHandler);
 
